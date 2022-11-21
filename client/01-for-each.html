@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-For-Each</title>
+</head>
+<body>
+  <div>   
+    <ul id="app">
+
+    </ul>
+  </div>
+  <hr>
+  <h1>Ejercicio Clase</h1>
+  <h5>Tareas - HomeWork</h5>
+  <ul id="tareas">
+
+  </ul>
+  
+
+  <script>
+    const products = [
+      {title:'Burger', price:122},
+      {title:'Pasta', price:12},
+      {title:'Meat', price:100},      
+      ];
+
+    const app = document.getElementById('app');
+    products.forEach(product => {
+      app.innerHTML += `<li>Product:${product.title} - Cost:$${product.price}</li>`
+    });
+
+    const tasks = [
+      {title:'Limpiar', state:false},
+      {title:'Cocinar', state:true},
+      {title:'Barrer', state:false},
+      {title:'Limpiar Polvo', state:true},
+    ];
+
+    const tareas = document.getElementById('tareas');
+
+    tasks.forEach(task => {
+      tareas.innerHTML += `<li>
+                            Tarea: ${task.title}
+                            <input type="checkbox" name="task" id="task" ${task.state?'checked':''}></input>
+                            <label for="task">Done?</label>
+                          </li>`;
+    });
+
+  </script>
+  
+</body>
+</html>
