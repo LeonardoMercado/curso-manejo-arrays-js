@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function(event){
   //   return order;
   // });
 
+  //console.log(orders);
+  //console.log(ordersCustom);
+
   const ordersCustom = orders.map(order => {
     return {
       ...order,
@@ -52,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 function sumarArray(array){
   let contador = 0;
-  array.forEach(element => contador += element);
+  array.forEach(element => {
+    console.log(element);
+    contador += element
+  });
   return contador;
 }
