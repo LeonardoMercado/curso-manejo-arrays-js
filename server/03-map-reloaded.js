@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   console.log(ordersCustom);
    
   
-  
+    
   
   const total = sumarArray(totalOrders);
   console.log(total);
